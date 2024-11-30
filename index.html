@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LivLine Simplifier</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- Sticky Navbar -->
+    <header id="navbar" class="sticky-navbar">
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <h1 class="slogan">"Simplify your life with LivLine"</h1>
+    </section>
+
+    <!-- Intro Section -->
+    <section id="about" class="intro">
+      <p class="intro-text">
+        LivLine is your go-to tool for simplifying text and making complex
+        instructions easier to understand.
+      </p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+      <div class="button-container">
+        <a href="#input-area" class="service-button">Services →</a>
+        <a href="#about" class="about-button">About →</a>
+      </div>
+    </section>
+
+    <!-- Input Area -->
+    <section id="input-area" class="input-section">
+      <h2>Input Area</h2>
+      <form id="simplifyForm" class="simplify-form">
+        <textarea
+          id="inputText"
+          class="input-text"
+          rows="4"
+          cols="50"
+          placeholder="Enter text here..."
+        ></textarea
+        ><br />
+        <button type="submit" class="form-button">Simplify</button>
+      </form>
+    </section>
+
+    <!-- Output Area -->
+    <section id="output-area" class="output-section">
+      <h2>Output Area</h2>
+      <p id="result" class="output-text">
+        Your simplified text will appear here.
+      </p>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+      <p>&copy; 2024 LivLine. All rights reserved.</p>
+    </footer>
+
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>
