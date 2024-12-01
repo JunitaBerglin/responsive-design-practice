@@ -4,45 +4,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LivLine Simplifier</title>
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./src/css/style.css" />
   </head>
   <body>
     <!-- Sticky Navbar -->
-    <header id="navbar" class="sticky-navbar">
-      <nav>
-        <ul class="nav-links">
-          <li><a href="#services">Services</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+    <nav class="sticky-navbar">
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
 
     <!-- Hero Section -->
-    <section id="hero" class="hero">
-      <h1 class="slogan">"Simplify your life with LivLine"</h1>
+    <section class="hero">
+      <h1 class="slogan">Simplify your life with LivLine</h1>
     </section>
+
+    <div class="button-container">
+      <a class="arrow-button">Services →</a>
+      <a class="arrow-button">About →</a>
+    </div>
 
     <!-- Intro Section -->
-    <section id="about" class="intro">
-      <p class="intro-text">
+    <section class="intro">
+      <h2 class="intro-text">
         LivLine is your go-to tool for simplifying text and making complex
         instructions easier to understand.
-      </p>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="services">
-      <div class="button-container">
-        <a href="#input-area" class="service-button">Services →</a>
-        <a href="#about" class="about-button">About →</a>
-      </div>
+      </h2>
     </section>
 
     <!-- Input Area -->
-    <section id="input-area" class="input-section">
+    <section class="input-section">
       <h2>Input Area</h2>
-      <form id="simplifyForm" class="simplify-form">
+      <form class="simplify-form">
         <textarea
           id="inputText"
           class="input-text"
@@ -56,7 +51,7 @@
     </section>
 
     <!-- Output Area -->
-    <section id="output-area" class="output-section">
+    <section class="output-area output-section">
       <h2>Output Area</h2>
       <p id="result" class="output-text">
         Your simplified text will appear here.
@@ -64,7 +59,7 @@
     </section>
 
     <!-- Footer -->
-    <footer id="footer" class="footer">
+    <footer class="footer">
       <p>&copy; 2024 LivLine. All rights reserved.</p>
     </footer>
 
