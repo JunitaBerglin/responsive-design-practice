@@ -8,21 +8,30 @@
   </head>
   <body>
     <!-- Sticky Navbar -->
-    <nav class="sticky-navbar">
-      <ul class="nav-links">
-        <li><a href="#services">Services</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="header">
+      <section class="logo">
+        <img
+          src="./src/assets/images/image.png"
+          alt="LivLine Logo"
+          class="logo-image"
+        />
+      </section>
 
-    <!-- Hero Section -->
-    <section class="hero">
-      <h1 class="slogan">Simplify your life with LivLine</h1>
+      <nav class="sticky-navbar">
+        <ul class="nav-links">
+          <li><a href="#input-area">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <section class="slogan">
+      <h1 class="slogan-heading">Simplify your life</h1>
     </section>
 
     <div class="button-container">
-      <a class="arrow-button">Services →</a>
+      <a href="#input-area" class="arrow-button">Services →</a>
       <a class="arrow-button">About →</a>
     </div>
 
@@ -34,31 +43,27 @@
       </h2>
     </section>
 
-    <!-- Input Area -->
-    <section class="input-section">
-      <h2>Input Area</h2>
-      <form class="simplify-form">
+    <!-- Services Section -->
+    <section class="service-wrapper">
+      <!-- Input Area -->
+      <form>
+        <h2>Input Area:</h2>
+        <br />
         <textarea
-          id="inputText"
+          id="input-area"
           class="input-text"
-          rows="4"
+          rows="6"
           cols="50"
           placeholder="Enter text here..."
-        ></textarea
-        ><br />
+        ></textarea>
         <button type="submit" class="form-button">Simplify</button>
       </form>
+
+      <section class="output-wrapper">
+        <p>Your simplified text will appear here.</p>
+      </section>
     </section>
 
-    <!-- Output Area -->
-    <section class="output-area output-section">
-      <h2>Output Area</h2>
-      <p id="result" class="output-text">
-        Your simplified text will appear here.
-      </p>
-    </section>
-
-    <!-- Footer -->
     <footer class="footer">
       <p>&copy; 2024 LivLine. All rights reserved.</p>
     </footer>
