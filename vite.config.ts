@@ -1,7 +1,7 @@
 import {defineConfig} from 'vite';
 
 export default defineConfig({
-base: 'responsive-design-practice',
+base: '/responsive-design-practice',
 server: {
     port: 3000,
     proxy: {
