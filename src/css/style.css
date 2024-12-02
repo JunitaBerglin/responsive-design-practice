@@ -180,7 +180,7 @@ form {
 }
 
 .output-wrapper {
-  max-width: 60%;
+  min-width: 60%;
   background: #fff;
   border-radius: 5px;
   color: #8e8c8c;
@@ -318,6 +318,11 @@ form {
   .input-text {
     max-width: 80%;
     margin-bottom: 70px;
+  }
+  .textContent {
+    text-align: center;
+    font-size: 1.2em;
+    min-width: 50%;
   }
 
   .form-button {

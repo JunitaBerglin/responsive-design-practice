@@ -1,45 +1,37 @@
-const form = document.getElementById("input-area");
-const inputText = document.getElementById("inputText");
+const form = document.querySelector("form"); // Attach to the form, not the button
+const inputText = document.getElementById("inputText") as HTMLInputElement;
 const result = document.getElementById("result");
 
-if (form) {
-    form.addEventListener("submit", async (event) => {
-    event.preventDefault(); 
+if (form && inputText && result) {
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
 
-    const text = inputText ? (inputText as HTMLInputElement).value.trim() : "";
+    const text = inputText.value.trim();
     if (!text) {
-        if (result) {
-            result.textContent = "Please enter some text to simplify.";
-        }
-        return;
+      result.textContent = "Please enter some text to simplify.";
+      return;
     }
 
     try {
-        const response = await fetch("http://localhost:5052/simplify", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ text }),
-        });
+      const response = await fetch("http://localhost:5052/Simplify", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(text), // Send `text` directly, as your controller expects
+      });
 
-            if (!response.ok) {
-                if (result) {
-                    result.textContent = "Error: " + response.statusText;
-                }
-                return;
-            }
+      if (!response.ok) {
+        result.textContent = "Error: " + response.statusText;
+        return;
+      }
 
-            const data = await response.json();
-            if (result) {
-                result.textContent = `${data.simplified}`;
-            }
-        } catch (error) {
-            if (result) {
-                if (error instanceof Error) {
-                    result.textContent = `Error: ${error.message}`;
-                } else {
-                    result.textContent = "An unknown error occurred.";
-                }
-            }
-        }
-    });
+      const data = await response.json();
+      result.textContent = data.simplified; // Display the simplified text
+    } catch (error) {
+      if (error instanceof Error) {
+        result.textContent = `Error: ${error.message}`;
+      } else {
+        result.textContent = "An unknown error occurred.";
+      }
+    }
+  });
 }

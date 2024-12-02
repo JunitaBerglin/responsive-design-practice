@@ -31,7 +31,7 @@
     </section>
 
     <div class="button-container">
-      <a href="#input-area" class="arrow-button">Services →</a>
+      <a href="#inputText" class="arrow-button">Services →</a>
       <a class="arrow-button">About →</a>
     </div>
     <div class="skewed-background2"></div>
@@ -51,19 +51,17 @@
         <h2>Input Area:</h2>
         <br />
         <textarea
-          id="input-area"
+          id="inputText"
           class="input-text"
           rows="6"
           cols="50"
           placeholder="Enter text here..."
         ></textarea>
-        <button type="submit" id="input-text" class="form-button">
-          Simplify
-        </button>
+        <button type="submit" class="form-button">Simplify</button>
       </form>
 
-      <section class="output-wrapper" id="result">
-        <p>Your simplified text will appear here.</p>
+      <section class="output-wrapper">
+        <p id="result" class="textContent"></p>
       </section>
     </section>
 
