@@ -143,6 +143,7 @@ form {
   align-items: center;
   min-height: 45rem;
   gap: 10px;
+  max-width: 90%;
 }
 
 .input-text {
@@ -186,15 +187,15 @@ form {
   color: #8e8c8c;
   padding: 20px;
   min-height: 7rem;
+  max-width: 90%;
 }
 
 .sticky-navbar {
   position: fixed;
   bottom: 16px;
-  left: 18px;
+  left: -3px;
   display: flex;
   padding: 10px 30px;
-  justify-content: center;
   align-items: center;
   background-color: rgba(130, 167, 136, 0.8);
   border-radius: 20px;
@@ -242,6 +243,7 @@ form {
   text-align: center;
   background: #333;
   color: white;
+  max-width: 100%;
 }
 
 /* Tablet View */
@@ -332,7 +334,6 @@ form {
   }
 
   .output-wrapper {
-    width: 80%;
     font-size: 25px;
     padding: 20px;
     min-height: 15rem;
